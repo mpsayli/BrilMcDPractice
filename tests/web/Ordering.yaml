@@ -1,0 +1,38 @@
+description: |
+  Navigate to the GitHub website, find the React repo using the
+  search functionality and go to the repo's homepage
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: OurMenu
+            
+          - description: Click the Mobile hyper link
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.Breakfast
+
+          - description: Click the Mobile hyper link
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+          - macro: Scroll
+
+          - description: Click the Mobile hyper link
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").BreakFast.SausageBiscuit
+
+          - description: Verify the "product" is MacBook
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: $data("Locators").BreakFast.SausageBiscuit
+              textContains: Sausage Biscuit
+              caseInsensitive: true
+              
+          
+
+
+
