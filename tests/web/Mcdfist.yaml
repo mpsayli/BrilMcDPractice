@@ -1,0 +1,40 @@
+description: |
+  Navigate to the mcdonalds website, click on Ordernow button 
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - description: Navigate to the GitHub homepage
+            action: org.getopentest.selenium.NavigateTo
+            args:
+              url: https://www.mcdonalds.com/
+
+          - description: Click the ordernow button
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { id: 'button-ordernow' }
+
+          - description: select mymc radio button
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { id: 'radio0' }
+
+          # - description: click on cookies settings
+          #   action: org.getopentest.selenium.Click
+          #   args:
+          #     locator: { id: 'onetrust-pc-btn-handler' }
+
+          - description: closing cookies settings
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+          
+          - description: click on continue
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//button[text()='Continue']" }
+
+
+          - script: $delay(2000);

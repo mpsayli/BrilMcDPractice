@@ -1,0 +1,17 @@
+description: |
+  Navigate to the Mcdonalds website, find the React repo using the
+  search functionality and go to the ordernow 
+actions:
+  - description: Mcdonalds fast food ordering
+    action: org.getopentest.selenium.NavigateTo
+    args:
+      url: https://www.mcdonalds.com/us/en-us.html
+
+  - description: Click on Ordernow 
+    action: org.getopentest.selenium.Click
+    args:
+      locator: { id: 'button-ordernow' }
+
+
+  
+
