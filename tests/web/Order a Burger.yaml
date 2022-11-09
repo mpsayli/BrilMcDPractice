@@ -1,0 +1,39 @@
+description: |
+  Navigate to the Mcdonalds website, and try to order a Burgers
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: OurMenu
+            
+          - description: Click on Burgers hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.Burgers
+
+          - description: To Close Cookies popup
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+          - macro: Scroll
+            args:
+              locator: $data("Locators").Burgers.McDouble
+
+          - description: Once scrolled down click on McDouble hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").Burgers.McDouble
+
+          - description: Verify the "product" is as expected
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: $data("Locators").Burgers.McDoubleText
+              textContains: McDouble®
+              caseInsensitive: true
+              
+          
+
+
+

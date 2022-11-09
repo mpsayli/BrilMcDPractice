@@ -1,6 +1,5 @@
 description: |
-  Navigate to the GitHub website, find the React repo using the
-  search functionality and go to the repo's homepage
+  Navigate to the Mcdonalds website, and try to order a breakfast
 actors:
   - actor: ACTOR1
     segments:
@@ -8,27 +7,29 @@ actors:
         actions:
           - macro: OurMenu
             
-          - description: Click the Mobile hyper link
+          - description: Click on BreakFast hyperlink
             action: org.getopentest.selenium.Click
             args:
               locator: $data("Locators").HomePage.Breakfast
 
-          - description: Click the Mobile hyper link
+          - description: To Close Cookies popup
             action: org.getopentest.selenium.Click
             args:
               locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
 
           - macro: Scroll
+            args:
+              locator: $data("Locators").BreakFast.SausageBiscuit
 
-          - description: Click the Mobile hyper link
+          - description: Once scrolled down click on SausageBiscuit hyperlink
             action: org.getopentest.selenium.Click
             args:
               locator: $data("Locators").BreakFast.SausageBiscuit
 
-          - description: Verify the "product" is MacBook
+          - description: Verify the "product" is as expected
             action: org.getopentest.selenium.AssertElementText
             args:
-              locator: $data("Locators").BreakFast.SausageBiscuit
+              locator: $data("Locators").BreakFast.SausageBiscuitText
               textContains: Sausage Biscuit
               caseInsensitive: true
               

@@ -1,0 +1,39 @@
+description: |
+  Navigate to the Mcdonalds website, and try to order a Beverages
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: OurMenu
+            
+          - description: Click on Beverages hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.Beverages
+
+          - description: To Close Cookies popup
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+          - macro: Scroll
+            args:
+              locator: $data("Locators").BeveRages.DietCoke
+
+          - description: Once scrolled down click on DietCoke hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").BeveRages.DietCoke
+
+          - description: Verify the "product" is as expected
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: $data("Locators").BeveRages.DietCokeText
+              textContains: Diet Coke®
+              caseInsensitive: true
+              
+          
+
+
+
