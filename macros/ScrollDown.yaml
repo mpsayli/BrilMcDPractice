@@ -1,0 +1,15 @@
+description: |
+  Navigate to the Mcdonalds website, find the React repo using the
+  search functionality and go to the ourMenu and order an item from there 
+actions:
+  # - description: Move the mouse to product 1 element
+  #   action: org.getopentest.selenium.ActionsMoveTo
+    
+  - description: Scroll Down 
+    action: org.getopentest.selenium.ExecuteScript
+    args:
+      script: |
+       window.scrollBy(0, 4000)
+
+  - description: Delay execution for two seconds
+    script: $delay(2000)

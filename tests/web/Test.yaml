@@ -1,0 +1,27 @@
+description: |
+  Navigate to the GitHub website, find the React repo using the
+  search functionality and go to the repo's homepage
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: LaunchApp
+          - macro: ScrollDown
+            args:
+              locator: $data("Locators").FooterLink.AboutUS
+
+          - description: Click on close icon of cookies pop up
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").FooterLink.CookiesClose
+
+          - description: Delay execution for two seconds
+            script: $delay(2000)
+        
+          - description: Click on About US
+            action: org.getopentest.selenium.Click
+            args:
+              locator:
+                dataSet: $data("TestData.csv")
+          
