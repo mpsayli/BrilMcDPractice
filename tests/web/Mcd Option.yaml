@@ -27,5 +27,21 @@ actors:
             args:
               locator: { xpath: "//button[text()='Continue']" }
 
+          - script: $delay(5000);
 
+          - description: Move the mouse to product 1 element
+            action: org.getopentest.selenium.ActionsMoveTo
+            args:
+              locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
+
+          - action: org.getopentest.selenium.ActionsPerform
+
+          - script: $delay(5000);
+          
+
+          - description: Select Deals and much more
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
+                           
           - script: $delay(2000);
