@@ -30,5 +30,12 @@ actors:
           - description: Delay execution for two seconds
             script: $delay(10000)
 
+          - macro: ScrollDown
+
+          - description: Click on Our History
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").FooterLink.OurHistory
+
 
           
