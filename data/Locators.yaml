@@ -39,4 +39,6 @@ Burgers:
 HappyMeal:
   HamBurgerHappyMeal: { xpath: "//a[@href='/us/en-us/meal/hamburger-happy-meal.html']//div[@class='cmp-category__details']"}
   HamBurgerHappyMealText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Hamburger Happy Meal®']"}
+  HamBurgerHappyMealText1: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Hamburger Happy Meal®']"}
+  HamBurgerHappyMealText2: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Hamburger Happy Meal®']"}
  
