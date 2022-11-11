@@ -18,7 +18,7 @@ actors:
             action: org.getopentest.selenium.Click
             args:
               locator: $data("Locators").FooterLink.AboutUS
-
+              
           - macro: ScrollDown
 
           - description: Click on Our History

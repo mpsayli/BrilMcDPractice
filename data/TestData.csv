@@ -1,2 +1,2 @@
-xpath
-//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='About Us']
+,xpath
+aboutus,//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='About Us']
