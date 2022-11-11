@@ -11,6 +11,26 @@ HomePage:
   DollarMenu: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='$1 $2 $3 Dollar Menu*']" }
   McNuggetsAndMeal: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='McNuggets® and Meals']" }
   McCafe Backery: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='McCafé® Bakery']" }
+  SignUpForEmail: {xpath: "(//span[contains(text(),'Sign Up for Email')])[2]"}
+  SignUpForEmailHeader: {xpath: "//h1[contains(text(),'McDonald’s Email Signup')]"}
+  SignUpHeader: {xpath: "//h2[@xpath='1'][contains(text(),'Sign Up')]"}
+  SignUpInfo: {xpath: "//h2/../p"}
+  SignUpEmail: {xpath: "//label[text()='* Email']"}
+  SignUpZip: {xpath: "//label[text()='* Zip Code']"}
+  SignUpEmailField: {xpath: "//input[@name='email']"}
+  SignUpZipField: {xpath: "//input[@name='zip']"}
+  SignUpTermsText: {xpath: "//form[1]/div[2]/div[8]/div[1]/p[1]"}
+  SignUpButton: {xpath: "//button[contains(text(),'Sign Up')]"}
+  SignUpEmailErrorMsg: {xpath: "//span[@data-error-message='Email is required']"}
+  SignUpZipErrorMsg: {xpath: "//span[@data-error-message='Zip Code is required']"}
+  Cookie: {xpath: "//div[@id='onetrust-close-btn-container']/button"}
+  SignUpInvalidEmailErrorMsg: {xpath: "//span[@data-validation-message='Please enter a valid email address']"}
+  SignUpInvalidZipErrorMsg: {xpath: "//span[@data-validation-message=' Invalid zip code']"}
+  PrivacyPolicy: {xpath: "//a/u[contains(text(),'Privacy Policy')]"}
+  TermsConditions: {xpath: "//a/u[contains(text(),'Terms & Conditions')]"}
+  Unsubscribe: {xpath: "//a/u[contains(text(),'Unsubscribe from emails')]"}
+  ThankYouSubscribing: {xpath: "//h2[contains(text(), 'Thanks for subscribing!')]"}
+  ThankYouSubscribingText: {xpath: "//h2[contains(text(), 'Thanks for subscribing!')]/../p"}
 
 BreakFast:
   SausageBiscuit: { xpath: "//a[@href='/us/en-us/product/sausage-biscuit.html']//div[@class='cmp-category__details']"}
