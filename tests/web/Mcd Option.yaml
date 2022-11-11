@@ -16,32 +16,59 @@ actors:
           #   args:
           #     locator: { id: 'onetrust-pc-btn-handler' }
 
-          - description: closing cookies settings
+          - description: To Close Cookies popup
             action: org.getopentest.selenium.Click
             args:
               locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
-
 
           - description: click on continue
             action: org.getopentest.selenium.Click
             args:
               locator: { xpath: "//button[text()='Continue']" }
 
-          - script: $delay(5000);
+          - script: $delay(10000);
 
-          - description: Move the mouse to product 1 element
-            action: org.getopentest.selenium.ActionsMoveTo
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
             args:
-              locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
+              windowNumber: 2
+       
+          - description: New window
+            action: org.getopentest.selenium.TakeScreenshot
+      
+          - script: $delay(1000)
 
-          - action: org.getopentest.selenium.ActionsPerform
+          - description: Verify Deliciousness At Your Fingertips - text
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: { xpath: "//span[@class='heading-1']" }
+              textMatches: Deliciousness At Your Fingertips
 
-          - script: $delay(5000);
-          
+          - script: $delay(1000)
+          # - description: Move the mouse to product 1 element
+          #   action: org.getopentest.selenium.ActionsMoveTo
+          #   args:
+          #     locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
+
+          # - action: org.getopentest.selenium.ActionsPerform
+          - macro: Scroll
+                 
+          - description: Verify that the submit button is enabled
+            action: org.getopentest.selenium.AssertElementEnabled
+            args:
+              locator: {xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }        
 
           - description: Select Deals and much more
             action: org.getopentest.selenium.Click
             args:
               locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
-                           
-          - script: $delay(2000);
+
+          - description: Verify MyMcDonald's Rewards - text
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: {Xpath: "//div[@class='cmp-title'][1] [text()='MyMcDonald's Rewards']"}
+              textMatches: MyMcDonald's Rewards
+              
+
+          - script: $delay(1000)
+          
