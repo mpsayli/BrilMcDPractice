@@ -1,0 +1,220 @@
+description: |
+  Navigate to the McD website, find the Sign Up button
+  and check the sign up page
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - description: Navigate to the McD homepage
+            action: org.getopentest.selenium.NavigateTo
+            args:
+              url: $data("Config").URL
+
+          - description: Click on the sign for email link
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.SignUpForEmail
+
+          - description: Verify that the header is present
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpForEmailHeader
+
+          - description: Verify text below header is present
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: $data("Locators").HomePage.SignUpInfo
+              textContains: Be in the know about deals, MyMcDonald’s Rewards, news and more by signing up for emails.
+              caseInsensitive: true
+
+          - description: Verify email field is present
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpEmail
+
+          - description: Verify zip code field is present
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpZip
+
+          - description: Verify sign up terms text field is present
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpTermsText
+
+          - description: Click on the Cookies pop up
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.Cookie
+
+          - description: Verify sign up button is present
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpButton
+
+          - description: Click on Sign Up button
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.SignUpButton
+
+          - description: Verify sign up email error
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpEmailErrorMsg
+
+          - description: Verify sign up zip code error
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpZipErrorMsg
+
+          - description: Enter invalid email
+            action: org.getopentest.selenium.SendKeys
+            args:
+              locator: $data("Locators").HomePage.SignUpEmailField
+              text: mcd  
+
+          - description: Enter invalid zip code
+            action: org.getopentest.selenium.SendKeys
+            args:
+              locator: $data("Locators").HomePage.SignUpZipField
+              text: 23  
+
+          - description: Click on Sign Up button
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.SignUpButton
+
+          - description: Verify sign up invalid email error
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpInvalidEmailErrorMsg
+
+          - description: Verify sign up invalid zip code error
+            action: org.getopentest.selenium.AssertElementVisible
+            args:
+              locator: $data("Locators").HomePage.SignUpInvalidZipErrorMsg
+
+          - description: Verify Privacy Policy page is opened
+            action: org.getopentest.selenium.ActionsKeyDown
+            args:
+              key: CONTROL
+
+          - action: org.getopentest.selenium.ActionsClick
+            args:
+              locator: $data("Locators").HomePage.PrivacyPolicy
+
+          - action: org.getopentest.selenium.ActionsKeyUp
+            args:
+              key: CONTROL
+
+          - action: org.getopentest.selenium.ActionsPerform
+
+          # - description: Delay execution for two seconds
+          #   script: $delay(10000)
+
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 2
+
+          - description: Validate page title
+            action: org.getopentest.selenium.AssertPageTitle
+            args:
+              titleContains: Privacy Policy | McDonald's
+          
+          - description: Close the current browser window
+            action: org.getopentest.selenium.CloseWindow
+
+          - description: Switch focus to the first tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 1
+
+          - description: Move the mouse to Terms and Condition
+            action: org.getopentest.selenium.ActionsMoveTo
+            args:
+              locator: $data("Locators").HomePage.TermsConditions
+
+          - action: org.getopentest.selenium.ActionsKeyDown
+            args:
+              key: CONTROL
+
+          - action: org.getopentest.selenium.ActionsClick
+            args:
+              locator: $data("Locators").HomePage.TermsConditions
+
+          - action: org.getopentest.selenium.ActionsKeyUp
+            args:
+              key: CONTROL
+              
+          - action: org.getopentest.selenium.ActionsPerform
+
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 2
+
+          - description: Validate page title
+            action: org.getopentest.selenium.AssertPageTitle
+            args:
+              titleContains: Terms & Conditions | McDonald's
+
+          - description: Close the current browser window
+            action: org.getopentest.selenium.CloseWindow
+
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 1
+          
+          - action: org.getopentest.selenium.ActionsKeyDown
+            args:
+              key: CONTROL
+          - action: org.getopentest.selenium.ActionsClick
+            args:
+              locator: $data("Locators").HomePage.Unsubscribe
+
+          - action: org.getopentest.selenium.ActionsKeyUp
+            args:
+              key: CONTROL
+              
+          - action: org.getopentest.selenium.ActionsPerform
+
+          # - description: Delay execution for two seconds
+          #   script: $delay(10000)
+
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 2
+
+          - description: Validate page title
+            action: org.getopentest.selenium.AssertPageTitle
+            args:
+              titleContains: Unsubscribe | McDonald’s
+
+          - description: Close the current browser window
+            action: org.getopentest.selenium.CloseWindow
+
+          - description: Switch focus to the second tab
+            action: org.getopentest.selenium.SwitchToWindow
+            args:
+              windowNumber: 1
+          
+          - description: Type a random user name into the "username" textbox
+            action: org.getopentest.selenium.SendKeys
+            args:
+              locator: $data("Locators").HomePage.SignUpEmailField
+              text: $script (Math.random().toString(36).slice(2, 7))+ "@gmail.com";
+
+          - description: Type a random user name into the "username" textbox
+            action: org.getopentest.selenium.SendKeys
+            args:
+              locator: $data("Locators").HomePage.SignUpZipField
+              text: $script Math.floor(Math.random()*100000+1)
+
+          - description: Delay execution for two seconds
+            script: $delay(10000)
+
+              
