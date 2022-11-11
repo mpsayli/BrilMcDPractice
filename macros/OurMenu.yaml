@@ -1,0 +1,16 @@
+description: |
+  Navigate to the Mcdonalds website, find the React repo using the
+  search functionality and go to the ourMenu and order an item from there 
+actions:
+  - description: Mcdonalds fast food ordering
+    action: org.getopentest.selenium.NavigateTo
+    args:
+      url: $data("Config").URL
+
+  - description: Click on OurMenu drop down
+    action: org.getopentest.selenium.Click
+    args:
+      locator: $data("Locators").HomePage.OurMenu
+
+  
+
