@@ -1,7 +1,7 @@
 description: |
   Navigate to the GitHub website, find the React repo using the
   search functionality and go to the repo's homepage
-dataSet: $data("TestData")
+dataSet: $data("TestData.csv")
 actors:
   - actor: ACTOR1
     segments:
@@ -19,10 +19,16 @@ actors:
           - description: Delay execution for two seconds
             script: $delay(2000)
 
-          - script: |
-             $log($data("TestData").aboutus); 
+
+          - description: Click on close icon of cookies pop up
+            action: org.getopentest.selenium.Click
+            args:
+              locator: {xpath: $dataRecord.xpath}
+          # - script: |
+          #    $log("Hello, " + $dataRecord.xpath)
 
           - description: Delay execution for two seconds
-            script: $delay(2000)
+            script: $delay(10000)
+
 
           
