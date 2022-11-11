@@ -63,12 +63,6 @@ actors:
             args:
               locator: { xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
 
-          - description: Verify MyMcDonald's Rewards - text
-            action: org.getopentest.selenium.AssertElementText
-            args:
-              locator: {Xpath: "//div[@class='cmp-title'][1] [text()='MyMcDonald's Rewards']"}
-              textMatches: MyMcDonald's Rewards
-              
-
+                    
           - script: $delay(1000)
           
