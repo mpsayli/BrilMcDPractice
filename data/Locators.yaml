@@ -16,6 +16,27 @@ BreakFast:
   SausageBiscuit: { xpath: "//a[@href='/us/en-us/product/sausage-biscuit.html']//div[@class='cmp-category__details']"}
   SausageBiscuitText: {xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Sausage Biscuit']"}
   SausageMcMfnWithEgg: { xpath: "//a[@href='/us/en-us/product/sausage-mcmuffin-with-egg.html']//div[@class='cmp-category__details']"}
-  
 
-  
+BeveRages:  
+  DietCoke: { xpath: "//a[@href='/us/en-us/product/diet-coke-small.html']//div[@class='cmp-category__details']"}
+  DietCokeText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[normalize-space()='Diet Coke®']"}
+
+FiresAndSides:
+  AppleSlices: { xpath: "//div[@id='product-category-e90ee6e60b-5d087c01d0_name']"}
+  AppleSlicesText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[normalize-space()='Apple Slices']"}
+  WorldFamousFries: { xpath: "//div[@id='product-category-e90ee6e60b-43fd94bdbf_name']"}
+
+SweetsAndTreats:
+  HotFudgeSundae: { xpath: "//div[@id='product-category-f7e34a9e55-6d1fbb9248_name']"}
+  StrawberryShake: { xpath: "//img[@id='product-category-f7e34a9e55-df295ff5ab_image']"}
+  StrawberryShakeText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Strawberry Shake']"}
+ 
+Burgers:
+  McDouble: { xpath: "//div[@id='product-category-5aa67698f9-fe26611caa_name']"}
+  McDoubleText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='McDouble®']"}
+  CheeseBurger: { xpath: "//div[@id='product-category-5aa67698f9-e0646441b4_name']"}
+
+HappyMeal:
+  HamBurgerHappyMeal: { xpath: "//a[@href='/us/en-us/meal/hamburger-happy-meal.html']//div[@class='cmp-category__details']"}
+  HamBurgerHappyMealText: { xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Hamburger Happy Meal®']"}
+ 
