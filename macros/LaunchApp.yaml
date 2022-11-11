@@ -1,0 +1,8 @@
+description: |
+  Navigate to the Mcdonalds website, find the React repo using the
+  search functionality and go to the ourMenu and order an item from there 
+actions:
+  - description: Launch MACD App
+    action: org.getopentest.selenium.NavigateTo
+    args:
+      url: https://www.mcdonalds.com/us/en-us.html
