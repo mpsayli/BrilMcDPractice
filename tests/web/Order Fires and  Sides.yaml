@@ -1,0 +1,39 @@
+description: |
+  Navigate to the Mcdonalds website, and try to order a FiresAndSide
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: OurMenu
+            
+          - description: Click on FiresAndSide hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").HomePage.FiresAndSides
+
+          - description: To Close Cookies popup
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+          - macro: Scroll
+            args:
+              locator: $data("Locators").FiresAndSides.AppleSlices
+
+          - description: Once scrolled down click on AppleSlices hyperlink
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").FiresAndSides.AppleSlices
+
+          - description: Verify the "product" is as expected
+            action: org.getopentest.selenium.AssertElementText
+            args:
+              locator: $data("Locators").FiresAndSides.AppleSlicesText
+              textContains: Apple Slices
+              caseInsensitive: true
+              
+          
+
+
+

@@ -5,7 +5,7 @@ actions:
   - description: Mcdonalds fast food ordering
     action: org.getopentest.selenium.NavigateTo
     args:
-      url: https://www.mcdonalds.com/us/en-us.html
+      url: $data("Config").URL
 
   - description: Click on OurMenu drop down
     action: org.getopentest.selenium.Click

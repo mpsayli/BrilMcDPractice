@@ -1,5 +1,5 @@
 description: |
-  Navigate to the Mcdonalds website, and try to order a breakfast
+  Navigate to the Mcdonalds website, and try to order a SweetsAndTreats
 actors:
   - actor: ACTOR1
     segments:
@@ -7,10 +7,10 @@ actors:
         actions:
           - macro: OurMenu
             
-          - description: Click on BreakFast hyperlink
+          - description: Click on SweetsAndTreats hyperlink
             action: org.getopentest.selenium.Click
             args:
-              locator: $data("Locators").HomePage.Breakfast
+              locator: $data("Locators").HomePage.SweetsAndTreats
 
           - description: To Close Cookies popup
             action: org.getopentest.selenium.Click
@@ -18,17 +18,19 @@ actors:
               locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
 
           - macro: Scroll
+            args:
+              locator: $data("Locators").SweetsAndTreats.StrawberryShake
 
-          - description: Once scrolled down click on SausageBiscuit hyperlink
+          - description: Once scrolled down click on Strawberry Shake hyperlink
             action: org.getopentest.selenium.Click
             args:
-              locator: $data("Locators").BreakFast.SausageBiscuit
+              locator: $data("Locators").SweetsAndTreats.StrawberryShake
 
           - description: Verify the "product" is as expected
             action: org.getopentest.selenium.AssertElementText
             args:
-              locator: $data("Locators").BreakFast.SausageBiscuit
-              textContains: Sausage Biscuit
+              locator: $data("Locators").SweetsAndTreats.StrawberryShakeText
+              textContains: Strawberry Shake
               caseInsensitive: true
               
           
