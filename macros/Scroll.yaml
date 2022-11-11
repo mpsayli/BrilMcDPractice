@@ -1,9 +1,11 @@
 description: |
   Navigate to the Mcdonalds website, find the React repo using the
-  search functionality and go to the ourMenu and order an item from there 
+  search functionality and go to the ordernow 
 actions:
   - description: Mcd Scroll
     action: org.getopentest.selenium.ExecuteScript
     args:
       script: |
-       window.scrollBy(0, 1000)
+        window.scrollBy(0,1000);
+    
+  - script: $delay(5000);

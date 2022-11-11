@@ -1,21 +1,8 @@
-HomePage:
-  OurMenu: { xpath: "//button[@aria-controls='ourMenuSubItemsList_desktop']"}
-  Breakfast: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Breakfast']" }
-  FiresAndSides:  { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Fries® & Sides']" }
-  SweetsAndTreats: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Sweets & Treats']" }
-  Burgers: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Burgers']" }
-  HappyMeal: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Happy Meal®']" }
-  Beverages: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Beverages']" }
-  ChickenAndFishSandwich: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='Chicken & Fish Sandwiches']" }
-  McfeeAndCofee: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='McCafé® Coffees']" }
-  DollarMenu: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='$1 $2 $3 Dollar Menu*']" }
-  McNuggetsAndMeal: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='McNuggets® and Meals']" }
-  McCafe Backery: { xpath: "//div[@id='ourMenuSubItemsList_desktop']//span[@class='menu-text'][text()='McCafé® Bakery']" }
-
-BreakFast:
-  SausageBiscuit: { xpath: "//a[@href='/us/en-us/product/sausage-biscuit.html']//div[@class='cmp-category__details']"}
-  SausageBiscuitText: {xpath: "//div[@class='cmp-product-details-main__desktop-only']//span[text()='Sausage Biscuit']"}
-  SausageMcMfnWithEgg: { xpath: "//a[@href='/us/en-us/product/sausage-mcmuffin-with-egg.html']//div[@class='cmp-category__details']"}
-  
-
+orderpage:
+  ordernow: { id: 'button-ordernow' }
+  mymc radio button : { id: 'radio0' }
+  cookies settings: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+  click on continue: { xpath: "//button[text()='Continue']" }
+  submit button: {xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
+  Deals and much more : {xpath: "(//div[@class='cmp-teaser__content'])[3]//*[@href='/us/en-us/mymcdonalds.html']" }
   

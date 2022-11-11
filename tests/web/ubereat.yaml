@@ -1,0 +1,33 @@
+description:  mcdonalds ordernoW
+actors:
+  - actor: ACTOR1
+    segments:
+      - segment: 1
+        actions:
+          - macro: Ordernow
+
+          - description: select mymc radio button
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { id: 'radio1' }
+
+          # - description: click on cookies settings
+          #   action: org.getopentest.selenium.Click
+          #   args:
+          #     locator: { id: 'onetrust-pc-btn-handler' }
+
+          - description: To Close Cookies popup
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
+
+
+          - description: click on continue
+            action: org.getopentest.selenium.Click
+            args:
+              locator: { xpath: "//button[text()='Continue']" }
+
+          - script: $delay(5000);
+
+                                    
+          
