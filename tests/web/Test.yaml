@@ -20,7 +20,7 @@ actors:
             script: $delay(2000)
 
 
-          - description: Click on close icon of cookies pop up
+          - description: Click on about us
             action: org.getopentest.selenium.Click
             args:
               locator: {xpath: $dataRecord.xpath}
@@ -35,12 +35,8 @@ actors:
           - description: Click on Our History
             action: org.getopentest.selenium.Click
             args:
-              locator: $data("Locators").FooterLink.OurHistory
-            
-          - description: Click on Our History
-            action: org.getopentest.selenium.Click
-            args:
-              locator: $data("Locators").FooterLink.OurHistory
+              locator: {xpath: $dataRecord.xpath}
+
             
 
           
