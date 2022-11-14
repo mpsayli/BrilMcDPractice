@@ -36,6 +36,11 @@ actors:
             action: org.getopentest.selenium.Click
             args:
               locator: $data("Locators").FooterLink.OurHistory
-
+            
+          - description: Click on Our History
+            action: org.getopentest.selenium.Click
+            args:
+              locator: $data("Locators").FooterLink.OurHistory
+            
 
           
