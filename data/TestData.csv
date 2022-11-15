@@ -1,4 +1,2 @@
 xpath
 //div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='About Us']
-//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='Our History']
-//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='Leadership Team']

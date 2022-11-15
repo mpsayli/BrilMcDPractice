@@ -27,15 +27,33 @@ actors:
           # - script: |
           #    $log("Hello, " + $dataRecord.xpath)
 
-          - description: Delay execution for two seconds
-            script: $delay(10000)
-
           - macro: ScrollDown
 
-          - description: Click on Our History
-            action: org.getopentest.selenium.Click
-            args:
-              locator: {xpath: $dataRecord.xpath}
+          # - description: Click on Our History
+          #   action: org.getopentest.selenium.Click
+          #   args:
+          #     locator: {xpath: $dataRecord.xpath}
+
+          # - description: Repeat 8 times
+          #   script: |
+          #     for (i = 0; i < 9; i++)
+          #     {
+          #       $runAction("org.getopentest.selenium.Click",
+          #         {
+          #           locator: {xpath: $dataRecord.xpath}
+          #         }
+          #       )
+          #     }
+
+
+          # - description: if condition
+          #   script: |
+          #       if ( locator: { xpath:"//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='Our History']") {
+          #         $runAction("org.getopentest.selenium.Click", {
+          #           xpath: "//div[@class='cmp-footer__nav-links']//span[@class='cmp-list__item-title'][normalize-space()='Our History']" }
+          #         });
+          #       }
+
 
             
 
