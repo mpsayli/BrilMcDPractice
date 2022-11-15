@@ -17,9 +17,10 @@ actors:
             args:
               locator: { xpath: "//div[@id='onetrust-close-btn-container']/button" }
 
-          - macro: Scroll
+          - description: Move the mouse to product 1 element
+            action: org.getopentest.selenium.ActionsMoveTo
             args:
-              locator: $data("Locators").BreakFast.SausageBiscuit
+              locator: $data("Locators").FiresAndSides.AppleSlices
 
           - description: Once scrolled down click on SausageBiscuit hyperlink
             action: org.getopentest.selenium.Click
